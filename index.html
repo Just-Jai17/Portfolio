@@ -913,6 +913,140 @@
     .wrapper { padding-top: 0; }
     .page { margin: 0; break-after: page; }
   }
+
+  /* ─────────────────── MOBILE RESPONSIVE ─────────────────── */
+  @media (max-width: 768px) {
+
+    /* Nav */
+    .nav { padding: 12px 20px; }
+    .nav-links { display: none; }
+
+    /* Wrapper */
+    .wrapper { padding-top: 52px; }
+
+    /* Cover */
+    .cover {
+      padding: 56px 28px 120px;
+      min-height: 100svh;
+    }
+    .cover-name { font-size: 42px; letter-spacing: -1px; }
+    .cover-title { font-size: 18px; margin-bottom: 24px; }
+    .cover-tagline { font-size: 15px; margin-bottom: 36px; }
+    .cover-stats { gap: 28px; margin-bottom: 40px; flex-wrap: wrap; }
+    .cover-stat-num { font-size: 28px; }
+    .cover-badge { right: 24px; bottom: 24px; }
+    .cover-badge-ring { width: 100px; height: 100px; }
+    .cover-badge-inner strong { font-size: 16px; }
+
+    /* Section headers */
+    .page-section { padding: 48px 24px 40px; }
+    .section-title { font-size: 28px; letter-spacing: -0.5px; }
+    .section-subtitle { font-size: 14px; margin-bottom: 32px; }
+
+    /* Summary grid → single column */
+    .summary-grid { grid-template-columns: 1fr; gap: 14px; }
+    .summary-quote { padding: 28px 24px; }
+    .summary-quote p { font-size: 15px; }
+
+    /* Skills */
+    .skills-hero { padding: 40px 24px; margin: 0 !important; border-radius: 0 !important; }
+    .skills-grid {
+      padding: 28px 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* Timeline */
+    .timeline { padding: 32px 24px; }
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .timeline-date { padding-top: 0; }
+
+    /* Ads hero */
+    .ads-hero { padding: 40px 24px 36px; }
+    .ads-metrics { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .ads-metric { padding: 18px 12px; }
+    .ads-metric-num { font-size: 22px; }
+
+    /* Ads body → single column */
+    .ads-body {
+      padding: 28px 24px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    /* Case study */
+    .case-hero { padding: 36px 24px 28px; }
+    .case-hero-title { font-size: 22px; letter-spacing: -0.5px; }
+    .case-hero-sub { font-size: 13px; }
+    .case-kpis {
+      grid-template-columns: 1fr;
+      padding: 20px 24px;
+      gap: 12px;
+    }
+    .case-kpi-num { font-size: 28px; }
+    .case-body {
+      padding: 24px 24px 32px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .case-result-strip { margin: 0 24px; padding: 24px 20px; }
+    .case-result-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* Process */
+    .process-steps { padding: 0 24px; }
+    .tools-grid {
+      padding: 0 24px 36px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* Value dark */
+    .value-dark { padding: 40px 24px; }
+    .value-cards { grid-template-columns: 1fr; gap: 12px; }
+    .value-card-num { font-size: 36px; }
+    .value-light { padding: 32px 24px; }
+
+    /* Closing */
+    .closing { padding: 60px 28px; min-height: 100svh; }
+    .closing-headline { font-size: 36px; letter-spacing: -1px; }
+    .closing-sub { font-size: 14px; }
+    .closing-links { flex-direction: column; align-items: center; gap: 10px; }
+    .closing-link { width: 100%; justify-content: center; }
+
+    /* Inline grid overrides for case study bottom sections */
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      display: block !important;
+    }
+    div[style*="grid-template-columns: 1fr 1fr"] > div {
+      margin-bottom: 24px;
+    }
+
+    /* Fix hardcoded paddings in inline styles */
+    div[style*="padding: 0 72px"],
+    div[style*="padding: 48px 72px"],
+    div[style*="padding: 56px 72px"],
+    div[style*="padding: 36px 72px"] {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+
+    /* Section title font size inside dark heroes */
+    .ads-hero .section-title,
+    .value-dark .section-title {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .cover-name { font-size: 34px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .tools-grid { grid-template-columns: 1fr; }
+    .ads-metrics { grid-template-columns: 1fr 1fr; }
+    .case-result-grid { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>

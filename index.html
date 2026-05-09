@@ -222,15 +222,17 @@
     z-index: 2;
   }
   .cover-badge-ring {
-    width: 140px; height: 140px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(66,133,244,0.3);
+    width: 130px; height: 130px;
+    background: rgba(66,133,244,0.08);
+    border: 1.5px solid rgba(66,133,244,0.35);
+    transform: rotate(45deg);
     display: flex; align-items: center; justify-content: center;
     position: relative;
   }
   .cover-badge-inner {
     text-align: center;
     color: white;
+    transform: rotate(-45deg);
   }
   .cover-badge-inner strong {
     display: block;
@@ -239,7 +241,7 @@
     color: #4285f4;
   }
   .cover-badge-inner span {
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.5);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -517,15 +519,16 @@
   }
 
   .ads-feature {
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 16px;
     padding: 28px;
+    background: rgba(255,255,255,0.04);
   }
   .ads-feature-num {
     font-family: 'Syne', sans-serif;
     font-size: 42px;
     font-weight: 900;
-    color: #e8f0fe;
+    color: rgba(66,133,244,0.3);
     line-height: 1;
     margin-bottom: 4px;
   }
@@ -533,10 +536,10 @@
     font-family: 'Syne', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #1a1a2e;
+    color: #ffffff;
     margin-bottom: 10px;
   }
-  .ads-feature-text { font-size: 14px; color: #6b7280; line-height: 1.65; }
+  .ads-feature-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 
   /* ─────────────────── CASE STUDY PAGES ─────────────────── */
   .case-hero {
@@ -827,25 +830,21 @@
     text-align: center;
     padding: 80px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
   .closing::before {
     content: '';
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    border: 1px solid rgba(66,133,244,0.1);
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4285f4, #34a853, #fbbc04, #ea4335, transparent);
   }
   .closing::after {
     content: '';
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px; height: 700px;
-    border-radius: 50%;
-    border: 1px solid rgba(66,133,244,0.06);
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(66,133,244,0.3), transparent);
   }
   .closing-inner { position: relative; z-index: 2; }
   .closing-icon { font-size: 64px; margin-bottom: 24px; }
@@ -873,14 +872,33 @@
   .closing-link {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 12px;
-    padding: 14px 24px;
+    border-radius: 14px;
+    padding: 16px 28px;
     color: white;
     font-size: 14px;
     font-weight: 500;
-    display: flex; align-items: center; gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
   }
-  .closing-link span { color: rgba(255,255,255,0.45); font-size: 12px; }
+  .closing-link-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    background: rgba(66,133,244,0.18);
+    border: 1px solid rgba(66,133,244,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .closing-link-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+  }
+  .closing-link span { color: rgba(255,255,255,0.4); font-size: 12px; display: block; margin-top: 2px; }
 
   /* ─────────────────── FOOTER BAND ─────────────────── */
   .footer-band {
@@ -935,7 +953,7 @@
     .cover-stats { gap: 28px; margin-bottom: 40px; flex-wrap: wrap; }
     .cover-stat-num { font-size: 28px; }
     .cover-badge { right: 24px; bottom: 24px; }
-    .cover-badge-ring { width: 100px; height: 100px; }
+    .cover-badge-ring { width: 90px; height: 90px; }
     .cover-badge-inner strong { font-size: 16px; }
 
     /* Section headers */
@@ -1576,13 +1594,25 @@
 
     <div class="closing-links">
       <div class="closing-link">
-        📧 <div><div style="font-size: 13px;">styxxaverblue@gmail.com</div><span>Email</span></div>
+        <div class="closing-link-icon">📧</div>
+        <div>
+          <div class="closing-link-label">styxxaverblue@gmail.com</div>
+          <span>Email</span>
+        </div>
       </div>
       <div class="closing-link">
-        📱 <div><div style="font-size: 13px;">+63 991 371 6942</div><span>Phone / WhatsApp</span></div>
+        <div class="closing-link-icon">📱</div>
+        <div>
+          <div class="closing-link-label">+63 991 371 6942</div>
+          <span>Phone / Viber / WhatsApp</span>
+        </div>
       </div>
       <div class="closing-link">
-        📍 <div><div style="font-size: 13px;">Muntinlupa City, PH</div><span>Location</span></div>
+        <div class="closing-link-icon">📍</div>
+        <div>
+          <div class="closing-link-label">Muntinlupa City, PH</div>
+          <span>Location</span>
+        </div>
       </div>
     </div>
 
